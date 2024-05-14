@@ -5,6 +5,8 @@ let routes = function(){
     //--//
     // router.use("/home", require("./routes/home")());
     router.use("/carrier", require("./routes/carrier")());
+    router.use("/shipper", require("./routes/shipper")());
+    router.use("/consignee", require("./routes/consignee")());
     //--//
     return router;
 };

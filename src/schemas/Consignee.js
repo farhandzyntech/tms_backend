@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const shipperSchema = new mongoose.Schema({
-    shipperName: { type: String, required: true },
+const consigneeSchema = new mongoose.Schema({
+    consigneeName: { type: String, required: true },
     address: {
         addressLine1: { type: String, default: '' },
         addressLine2: { type: String, default: '' },
@@ -19,18 +19,14 @@ const shipperSchema = new mongoose.Schema({
         tollFree: { type: String, default: '' },
         fax: { type: String, default: '' }
     },
-    shippingHours: { type: String, default: '' },
+    receivingHours: { type: String, default: '' },
     appointments: { type: String, enum: ['Yes', 'No'], default: 'No' },
     majorIntersectionDirections: { type: String, default: '' },
     duplicateInfo: { type: Boolean, default: false },
-    createdBy:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
-    },
+    addAsShipper: { type: Boolean, default: false },
     status: { type: String, enum: ['Active', 'Inactive'], default: 'Active' }
 }, { timestamps: true });
 
-const Shipper = mongoose.model('Shipper', shipperSchema);
+const Consignee = mongoose.model('Consignee', consigneeSchema);
 
-module.exports = Shipper;
+module.exports = Consignee;
