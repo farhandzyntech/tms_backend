@@ -52,7 +52,7 @@ app.use(limiter);
 app.use(hpp());
 
 //--////////////////////////////////////////////////////////////////
-let whitelist = ['http://localhost:3000']
+let whitelist = ['http://localhost:3000', 'https://main--tms-web-v1.netlify.app']
 const corsOptions = {
   origin: function (origin, callback) {
     // Check if the origin is in the whitelist or if it's coming from Postman
