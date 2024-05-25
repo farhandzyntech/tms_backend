@@ -4,6 +4,7 @@ let routes = function(){
     const router = express();
     //--//
     // router.use("/home", require("./routes/home")());
+    router.use("/dropdown", require("./routes/dropdown")());
     router.use("/carrier", require("./routes/carrier")());
     router.use("/shipper", require("./routes/shipper")());
     router.use("/consignee", require("./routes/consignee")());
