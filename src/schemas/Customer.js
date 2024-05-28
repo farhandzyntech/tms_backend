@@ -21,6 +21,8 @@ const customerSchema = new mongoose.Schema({
         city: { type: String, required: true },
         zip: { type: String, required: true }
     },
+    // Array of photo URLs
+    assets: [{ type: String }],
     sameAsMailingAddress: { type: Boolean, default: false },
     primaryContact: { type: String, default: '' },
     telephone: { type: String, default: '' },

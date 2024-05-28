@@ -19,6 +19,8 @@ const shipperSchema = new mongoose.Schema({
         tollFree: { type: String, default: '' },
         fax: { type: String, default: '' }
     },
+    // Array of photo URLs
+    assets: [{ type: String }],
     shippingHours: { type: String, default: '' },
     appointments: { type: String, enum: ['Yes', 'No'], default: 'No' },
     majorIntersectionDirections: { type: String, default: '' },

@@ -17,6 +17,7 @@ const LoadSchema = new mongoose.Schema({
     fsc: { type: Number, default: 0 },
     ratePercent: { type: Boolean, default: false },
     otherCharges: { type: Number, default: 0 },
+    total: { type: Number, default: 0 },
     equipmentType: { type: String, default: '' },
     carrierFee: { type: Number, default: 0 },
     currency: { 
@@ -32,6 +33,8 @@ const LoadSchema = new mongoose.Schema({
     customsBroker: { type: String },
     proMiles: { type: String },
     empty: { type: String },
+    // Array of photo URLs
+    assets: [{ type: String }],
     customer: {
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Customer', 

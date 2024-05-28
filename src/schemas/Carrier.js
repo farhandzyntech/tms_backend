@@ -15,9 +15,7 @@ const ExternalCarrier = new mongoose.Schema({
         postalZip: { type: String, required: true },
     },
     // Array of photo URLs
-    assets: {
-        type: [String],
-    },
+    assets: [{ type: String }],
     contactName: { type: String },
     email: { type: String },
     telephone: { type: String, required: true },

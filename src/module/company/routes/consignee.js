@@ -10,11 +10,9 @@ let routes = function(){
     //--////////////////////////////////
     routes.route("/fetch").get([protect], advancedResults(Consignee), consigneeController.fetch);
     //--////////////////////////////////
-    routes.route("/create").post([protect], consigneeController.create);
-    // routes.route("/create").post([protect], [upload.array('photos')], consigneeController.create);
+    routes.route("/create").post([protect], [upload.array('assets')], consigneeController.create);
     //--////////////////////////////////
-    routes.route("/update/:id").put([protect], consigneeController.update);
-    // routes.route("/update/:id").put([protect], [upload.array('photos')], consigneeController.update);
+    routes.route("/update/:id").put([protect], [upload.array('assets')], consigneeController.update);
     //--////////////////////////////////
     routes.route("/delete/:id").delete([protect], consigneeController.delete);
     //--////////////////////////////////

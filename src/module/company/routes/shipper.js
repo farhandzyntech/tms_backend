@@ -10,11 +10,9 @@ let routes = function(){
     //--////////////////////////////////
     routes.route("/fetch").get([protect], advancedResults(Shipper), shipperController.fetch);
     //--////////////////////////////////
-    routes.route("/create").post([protect], shipperController.create);
-    // routes.route("/create").post([protect], [upload.array('photos')], shipperController.create);
+    routes.route("/create").post([protect], [upload.array('assets')], shipperController.create);
     //--////////////////////////////////
-    routes.route("/update/:id").put([protect], shipperController.update);
-    // routes.route("/update/:id").put([protect], [upload.array('photos')], shipperController.update);
+    routes.route("/update/:id").put([protect], [upload.array('assets')], shipperController.update);
     //--////////////////////////////////
     routes.route("/delete/:id").delete([protect], shipperController.delete);
     //--////////////////////////////////
